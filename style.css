@@ -1,0 +1,380 @@
+:root {
+    --main-text-color: rgba(255, 255, 255, 0.849);
+    --sectionBG-colors: rgba(0, 0, 0, 0.89);
+    --mainOrange: rgb(255, 123, 0);
+    --blurOrange: rgba(151, 77, 8, 0.589);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--mainOrange);
+    width: 10px;
+    border-radius: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 20px 140px;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.507);
+    z-index: 100;
+}
+
+.header-links {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.header-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.header-links a:hover {
+    color: var(--mainOrange);
+}
+
+.header-logo {
+    cursor: pointer;
+}
+
+.select {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.507);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    width: 50px;
+    height: 20px;
+}
+
+.language-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    color: var(--main-text-color);
+    align-items: center;
+    justify-content: center;
+}
+
+.number-header {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.section1 {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.822);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 20px;
+    color: var(--main-text-color);
+    background-image: url(assets/evacuation.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 0px;
+    position: relative;
+}
+
+.hours {
+    color: var(--mainOrange);
+    font-size: xx-large;
+}
+
+.main-text-container {
+    color: var(--main-text-color);
+    z-index: 2;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
+    transition: 0.6s;
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: fadeIn 0.8s forwards;
+}
+
+@keyframes fadeIn {
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.main-text {
+    line-height: 2rem;
+}
+
+.svgContainer {
+    z-index: 2;
+    padding: 0;
+    transform: translateY(-200px);
+    animation: georgiaFade 0.8s forwards;
+    opacity: 0;
+    transition: 0.6s;
+}
+
+@keyframes georgiaFade {
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.blur {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.705);
+}
+
+.phoneNumber {
+    color: var(--mainOrange);
+    text-decoration: none;
+    z-index: 2;
+}
+
+.main-buttons {
+    width: 350px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.help {
+    color: var(--mainOrange);
+}
+
+.main-buttons a {
+    width: 170px;
+    background-color: rgb(83, 79, 79);
+    height: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 20px;
+    transition: 0.4s;
+}
+
+.headingContainer {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main-buttons a:hover {
+    box-shadow: inset 10px 0px 0px var(--mainOrange);
+}
+
+.section2 {
+    width: 100%;
+    height: 1900px;
+    background-color: var(--sectionBG-colors);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--main-text-color);
+    gap: 30px;
+}
+
+.cards-main-container-service {
+    width: 60%;
+    height: 1100px;
+    overflow: hidden;
+}
+
+.card-long {
+    width: 770px;
+    height: 350px;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cards-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.card-small {
+    height: 350px;
+    width: 380px;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bg1 {
+    background-image: url(assets/car.jpg);
+}
+
+.bg2 {
+    background-image: url(assets/tires.jpg);
+}
+
+.bg3 {
+    background-image: url(assets/jump.jpg);
+}
+
+.bg4 {
+    background-image: url(assets/mechanic.jpg);
+}
+
+.card-blur {
+    width: 100%;
+    height: 100%;
+    background-color: var(--blurOrange);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 20px;
+}
+
+.card-blur-long {
+    background-color: rgba(0, 0, 0, 0.541);
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.cards-row h1 {
+    color: var(--main-text-color);
+}
+
+.cardsCol {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+}
+
+.service-cards {
+    display: flex;
+    flex-direction: row;
+}
+
+.cardsCol i {
+    font-size: xx-large;
+}
+
+.card1 {
+    background-color: black;
+}
+
+.content {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.651);
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.card2 {
+    background-color: rgba(253, 114, 0, 0.829);
+}
+
+.card3 {
+    background-color: gray;
+}
+
+.callus {
+    color: white;
+    text-decoration: none;
+}
+
+.small {
+    background-color: lightgray;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(200px);
+  }
+  .comeinAnim {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .mechanic-section {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .car-services-tab-custom {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .choose-parts-container {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+  }
+
+  .choose {
+    background-color: var(--mainOrange);
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    user-select: none;
+  }
