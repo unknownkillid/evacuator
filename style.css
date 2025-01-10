@@ -5,11 +5,17 @@
     --blurOrange: rgba(151, 77, 8, 0.589);
 }
 
+@font-face {
+    font-family: georgian;
+    src: url(assets/font/bpg_glaho.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: georgian;
 }
 
 ::-webkit-scrollbar {
@@ -40,15 +46,60 @@
     display: flex;
     flex-direction: row;
     gap: 20px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.serviceLink {
+    cursor: pointer;
 }
 
 .header-links a {
     color: white;
     text-decoration: none;
+    font-size: 16px;
+    padding: 5px;
+    transition: color 0.3s ease;
 }
 
 .header-links a:hover {
     color: var(--mainOrange);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 100%; /* Show below the "სერვისი" link */
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+    border-radius: 10px;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 5px 10px;
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: orange;
+    color: white;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
 }
 
 .header-logo {
@@ -200,7 +251,7 @@
 
 .section2 {
     width: 100%;
-    height: 1900px;
+    height: 2100px;
     background-color: var(--sectionBG-colors);
     display: flex;
     align-items: center;
@@ -329,24 +380,27 @@
 .small {
     background-color: lightgray;
     opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
     transform: translateY(200px);
-  }
-  .comeinAnim {
+}
+.comeinAnim {
     opacity: 1;
     transform: translateY(0);
-  }
+}
 
-  .mechanic-section {
+.mechanic-section {
     width: 100%;
     height: 800px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-  }
+    overflow: hidden;
+}
 
-  .car-services-tab-custom {
+.car-services-tab-custom {
     width: 100%;
     height: 700px;
     display: flex;
@@ -354,21 +408,21 @@
     justify-content: center;
     flex-direction: column;
     gap: 50px;
-  }
+}
 
-  .choose-parts-container {
+.choose-parts-container {
     width: 100%;
-    height: 70px;
+    height: 170px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    transition: .6s;
+}
 
-  }
-
-  .choose {
-    background-color: var(--mainOrange);
+.choose {
+    background-color: rgb(114, 113, 113);
     width: 150px;
     height: 150px;
     display: flex;
@@ -377,4 +431,81 @@
     flex-direction: column;
     cursor: pointer;
     user-select: none;
-  }
+    border-radius: 10px;
+    font-size: small;
+}
+
+.car-container {
+    position: relative;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: .6s;
+}
+
+.carContainerIn {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.dot {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.801);
+    border-radius: 100px;
+    position: absolute;
+    background-position: center;
+    background-size: 40px;
+    background-repeat: no-repeat;
+}
+
+.diagnostic {
+    top: 190px;
+    left: 240px;
+    background-image: url(assets/diagnos.png);
+}
+
+.engine {
+    top: 140px;
+    left: 50px;
+    background-image: url(assets/engine.png);
+}
+
+.tires {
+    top: 210px;
+    right: 80px;
+    background-image: url(assets/tire.png);
+}
+
+.battery {
+    top: 100px;
+    left: 200px;
+    background-image: url(assets/batt.png);
+}
+
+.shift {
+    top: 240px;
+    left: 400px;
+    background-image: url(assets/shift.png);
+}
+
+.oil {
+    top: 100px;
+    left: 110px;
+    background-image: url(assets/oil.png);
+}
+
+.car-text-container {
+    width: 300px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.589);
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    color: black;
+}
+
+.orange {
+    background-color: orange;
+}

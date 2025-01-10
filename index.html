@@ -19,13 +19,20 @@
 
         <div class="header-links">
             <a href="#">მთავარი</a>
-            <a href="#section2">სერვისი</a>
+            <div class="dropdown">
+                <a class="serviceLink">სერვისი</a>
+                <div class="dropdown-menu">
+                    <a href="#">ევაკუატორი</a>
+                    <a href="#">სახელოსნო</a>
+                    <a href="#">გადაზიდვა</a>
+                </div>
+            </div>
             <a href="#">დახმარება</a>
             <a href="#">კონტაქტი</a>
         </div>
 
         <div class="language-container">
-            <h3 class="number-header"><i class="fa-solid fa-phone" style="font-size: medium;"></i>(+995)701-030</h3>
+            <h3 class="number-header"><i class="fa-solid fa-phone" style="font-size: medium;"></i>(+995) 701-030</h3>
             <select name="language" class="select" id="language">
                 <option selected disabled hidden>GE</option>
                 <option value="GE">GE</option>
@@ -163,7 +170,7 @@
             <div class="cards-row">
                 <div class="card-small bg3 second-small small">
                     <div class="card-blur">
-                        <h1 class="cardNames">ადგილზე მანქანის <br> დაქოქვა</h1>
+                        <h1 class="cardNames">მანქანის ადგილზე <br> დაქოქვა</h1>
 
                     </div>
                 </div>
@@ -206,34 +213,44 @@
             <h1>ჩვენი ავტო სახელოსნო</h1>
 
             <div class="car-services-tab-custom">
-                <div class="choose-parts-container">
-                    <div class="choose">
+                <div class="choose-parts-container mechanicContainer">
+                    <div class="choose" onclick="fullInfoMechanic(true);">
                         <img src="assets/diagnos.png" style="width: 90px;" alt="">
                         დიაგნოსტიკა
                     </div>
-                    <div class="choose">
+                    <div class="choose" onclick="fullInfoMechanic(false, true);">
                         <img src="assets/engine.png" style="width: 90px;" alt="">
-                        დიაგნოსტიკა
+                        ძრავი
                     </div>
-                    <div class="choose">
+                    <div class="choose" onclick="fullInfoMechanic(false, false, true)">
                         <img src="assets/tire.png" style="width: 90px;" alt="">
-                        დიაგნოსტიკა
+                        საბურავები
                     </div>
-                    <div class="choose">
+                    <div class="choose" onclick="fullInfoMechanic(false, false, false, true)">
                         <img src="assets/batt.png" style="width: 90px;" alt="">
-                        დიაგნოსტიკა
+                        აკუმლატორი
                     </div>
-                    <div class="choose">
+                    <div class="choose" onclick="fullInfoMechanic(false, false, false, false, true)">
                         <img src="assets/shift.png" style="width: 90px;" alt="">
-                        დიაგნოსტიკა
+                        გადაცემათა კოლოფი
                     </div>
-                    <div class="choose">
+                    <div class="choose" onclick="fullInfoMechanic(false, false, false, false, false, true)">
                         <img src="assets/oil.png" style="width: 90px;" alt="">
-                        დიაგნოსტიკა
+                        ზეთი
                     </div>
                 </div>
-                <div class="car-container">
+
+                <div class="car-container mechanicContainer">
                     <img src="assets/service-tab.png" alt="">
+                    <div class="dot diagnostic" id="diagnostic"></div>
+                    <div class="dot engine" id="engine"></div>
+                    <div class="dot tires" id="tires"></div>
+                    <div class="dot battery" id="battery"></div>
+                    <div class="dot shift" id="shift"></div>
+                    <div class="dot oil" id="oil"></div>
+                    <div class="car-text-container">
+                        <p id="fullInfo">კომპიუტერული დიაგნოსტიკა თქვენი მანქანისთვის</p>
+                    </div>
                 </div>
             </div>
 
