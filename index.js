@@ -73,3 +73,20 @@ document.addEventListener('click', (event) => {
     dropdownMenu.style.display = 'none';
   }
 });
+
+const questions = document.querySelectorAll('.faq-question');
+
+questions.forEach(question => {
+  question.addEventListener('click', () => {
+    // Close all other answers
+    document.querySelectorAll('.faq-answer').forEach(answer => {
+      if (answer !== question.nextElementSibling) {
+        answer.classList.remove('show');
+      }
+    });
+
+    // Toggle the clicked question's answer
+    const answer = question.nextElementSibling;
+    answer.classList.toggle('show');
+  });
+});

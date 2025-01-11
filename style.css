@@ -552,3 +552,53 @@
 .cargoPic {
     width: 800px;
 }
+
+.questions-section {
+    width: 100%;
+    height: 700px;
+    background-color: var(--sectionBG-colors);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.questions-section h1 {
+    color: var(--main-text-color);
+}
+
+.faq-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+
+  .faq-question {
+    background-color: #f7f7f7;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .faq-question:hover {
+    background-color: #e2e2e2;
+  }
+
+  .faq-answer {
+    background-color: #fff;
+    padding: 15px;
+    display: none;
+  }
+
+  .faq-answer.show {
+    display: block;
+  }
