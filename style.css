@@ -251,7 +251,7 @@
 
 .section2 {
     width: 100%;
-    height: 2100px;
+    height: 1300px;
     background-color: var(--sectionBG-colors);
     display: flex;
     align-items: center;
@@ -322,6 +322,19 @@
     width: 100%;
     height: 100%;
     padding: 20px;
+}
+
+.mechanic-section-main{ 
+    background-color: var(--sectionBG-colors);
+    width: 100%;
+    height: 800px;
+    color: white;
+}
+
+.cargo-information {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .cards-row h1 {
@@ -437,7 +450,7 @@
 
 .car-container {
     position: relative;
-    transform: translateX(100%);
+    transform: translateX(70%);
     opacity: 0;
     transition: .6s;
 }
@@ -456,6 +469,7 @@
     background-position: center;
     background-size: 40px;
     background-repeat: no-repeat;
+    cursor: pointer;
 }
 
 .diagnostic {
@@ -508,4 +522,33 @@
 
 .orange {
     background-color: orange;
+}
+
+.section-cargo {
+    width: 100%;
+    height: 650px;
+    background-color: var(--sectionBG-colors);
+}
+
+
+.cargo-container {
+    width: 100%;
+    height: 600px;
+    background-color: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 50px;
+    color: var(--main-text-color);
+}
+
+.cargo-content-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cargoPic {
+    width: 800px;
 }

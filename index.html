@@ -196,7 +196,6 @@
                         <h1>ხაზზე ვართ 24 საათის განმავლობაში</h1>
                         <a href="tel:+995701030" class="callus">დაგვიკავშირდით ახლავე <i class="fa-solid fa-arrow-right"
                                 style="font-size: medium;"></i></a>
-
                     </div>
                 </div>
                 <div class="cardsCol card3 first-small small">
@@ -209,6 +208,11 @@
             </div>
         </div>
 
+
+    </section>
+
+
+    <section class="mechanic-section-main" id="mechanicSection">
         <div class="mechanic-section">
             <h1>ჩვენი ავტო სახელოსნო</h1>
 
@@ -242,21 +246,38 @@
 
                 <div class="car-container mechanicContainer">
                     <img src="assets/service-tab.png" alt="">
-                    <div class="dot diagnostic" id="diagnostic"></div>
-                    <div class="dot engine" id="engine"></div>
-                    <div class="dot tires" id="tires"></div>
-                    <div class="dot battery" id="battery"></div>
-                    <div class="dot shift" id="shift"></div>
-                    <div class="dot oil" id="oil"></div>
+                    <div class="dot diagnostic" id="diagnostic" onclick="fullInfoMechanic(true)"></div>
+                    <div class="dot engine" id="engine" onclick="fullInfoMechanic(false, true);"></div>
+                    <div class="dot tires" id="tires" onclick="fullInfoMechanic(false, false, true)"></div>
+                    <div class="dot battery" id="battery" onclick="fullInfoMechanic(false, false, false, true)"></div>
+                    <div class="dot shift" id="shift" onclick="fullInfoMechanic(false, false, false, false, true)">
+                    </div>
+                    <div class="dot oil" id="oil" onclick="fullInfoMechanic(false, false, false, false, false, true)">
+                    </div>
                     <div class="car-text-container">
                         <p id="fullInfo">კომპიუტერული დიაგნოსტიკა თქვენი მანქანისთვის</p>
                     </div>
                 </div>
+
             </div>
 
         </div>
     </section>
 
+
+    <section class="section-cargo" id="sectionCargo">
+        <div class="cargo-container" id="cargoContainer">
+            <h1>გადაზიდვის სერვისი</h1>
+            <div class="cargo-content-container">
+                <div class="cargo-information">
+                    <h1>ჩვენ გადავიტანთ თქვენს ტვირთს, <br> ყველაზე სწრაფად და <span class="help">უსაფრთხოდ.</span>
+                    </h1>
+                    <p>ტვირთის მაქსიმალური წონა შეადგენს 4 ტონას. <br> დეტალებისთვის დარეკეთ</p>
+                </div>
+                <img class="cargoPic" src="assets/cargo.png" alt="">
+            </div>
+        </div>
+    </section>
 
 
 

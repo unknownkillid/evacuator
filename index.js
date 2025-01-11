@@ -5,14 +5,14 @@ const chooseContainer = document.querySelector('.choose-parts-container')
 const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('comeinAnim'); // Add animation class when in viewport
+      entry.target.classList.add('comeinAnim');
       entry.target.classList.add('carContainerIn')
     } else {
-      entry.target.classList.remove('comeinAnim'); // Remove animation class when out of viewport
+      entry.target.classList.remove('comeinAnim'); 
       entry.target.classList.remove('carContainerIn')
     }
   });
-}, { threshold: 0.1 }); // Trigger when 10% of the element is visible
+}, { threshold: 0.1 });
 
 smallContainers.forEach(container => observer.observe(container));
 observer.observe(carContainer)
@@ -68,7 +68,6 @@ dropdown.addEventListener('click', () => {
   dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
 });
 
-// Optional: Close dropdown when clicking outside
 document.addEventListener('click', (event) => {
   if (!dropdown.contains(event.target)) {
     dropdownMenu.style.display = 'none';
