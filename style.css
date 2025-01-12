@@ -93,6 +93,11 @@
     transition: background-color 0.3s ease;
 }
 
+.burger-btn-container {
+    display: none;
+    color: var(--main-text-color);
+}
+
 .dropdown-menu a:hover {
     background-color: orange;
     color: white;
@@ -165,6 +170,7 @@
     transform: translateX(-100%);
     opacity: 0;
     animation: fadeIn 0.8s forwards;
+    padding: 20px;
 }
 
 @keyframes fadeIn {
@@ -324,7 +330,7 @@
     padding: 20px;
 }
 
-.mechanic-section-main{ 
+.mechanic-section-main {
     background-color: var(--sectionBG-colors);
     width: 100%;
     height: 800px;
@@ -335,6 +341,7 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    padding: 20px;
 }
 
 .cards-row h1 {
@@ -342,7 +349,7 @@
 }
 
 .cardsCol {
-    width: 400px;
+    width: 383px;
     height: 400px;
     overflow: hidden;
     display: flex;
@@ -431,7 +438,7 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    transition: .6s;
+    transition: 0.6s;
 }
 
 .choose {
@@ -452,7 +459,7 @@
     position: relative;
     transform: translateX(70%);
     opacity: 0;
-    transition: .6s;
+    transition: 0.6s;
 }
 
 .carContainerIn {
@@ -526,14 +533,13 @@
 
 .section-cargo {
     width: 100%;
-    height: 650px;
+    height: 450px;
     background-color: var(--sectionBG-colors);
 }
 
-
 .cargo-container {
     width: 100%;
-    height: 600px;
+    height: 400px;
     background-color: none;
     display: flex;
     align-items: center;
@@ -546,21 +552,30 @@
 .cargo-content-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 .cargoPic {
-    width: 800px;
+    width: 500px;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.7s;
+}
+
+.cargoIn {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .questions-section {
     width: 100%;
-    height: 700px;
+    height: 600px;
     background-color: var(--sectionBG-colors);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 50px;
     flex-direction: column;
 }
 
@@ -569,36 +584,260 @@
 }
 
 .faq-container {
-    max-width: 600px;
-    margin: 0 auto;
-  }
+    max-width: 500px;
+}
 
-  .faq-item {
+.faq-item {
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 10px;
     overflow: hidden;
-  }
+}
 
-  .faq-question {
+.faq-question {
     background-color: #f7f7f7;
     cursor: pointer;
     padding: 15px;
     font-size: 18px;
     font-weight: bold;
     transition: background-color 0.3s ease;
-  }
+}
 
-  .faq-question:hover {
+.faq-question:hover {
     background-color: #e2e2e2;
-  }
+}
 
-  .faq-answer {
+.faq-answer {
     background-color: #fff;
     padding: 15px;
     display: none;
-  }
+}
 
-  .faq-answer.show {
+.faq-answer.show {
     display: block;
-  }
+}
+
+.questions-pic-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.quest-picture {
+    transform: translateX(-200px);
+    opacity: 0;
+    transition: 0.7s;
+}
+
+.questComeIn {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.quest-picture img {
+    border-radius: 500px;
+}
+
+.footer {
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--sectionBG-colors);
+    /* box-shadow: 10px 0px 1px white; */
+    color: var(--main-text-color);
+}
+
+.footer-content {
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: row;
+    gap: 90px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-links a,
+.footer-contact a {
+    color: var(--main-text-color);
+    text-decoration: none;
+    line-height: 2rem;
+}
+
+.footer-links,
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 1477px) {
+    .svgContainer img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 881px) {
+    .header-links,
+    .language-container {
+        display: none;
+    }
+
+    .burger-btn-container {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 975px) {
+    .section1 {
+        flex-direction: column;
+    }
+
+    .main-text-container {
+        align-items: center;
+        justify-content: center;
+        margin: 100px 0px 0px 0px ;
+    }
+
+    .svgContainer {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1325px) {
+    .cards-main-container-service {
+        width: 100%;
+    }
+
+    .cards-row,
+    .service-cards {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 965px) {
+    .choose-parts-container {
+        zoom: 80%;
+    }
+}
+@media screen and (max-width: 773px) {
+    .choose-parts-container {
+        zoom: 60%;
+    }
+}
+@media screen and (max-width: 825px) {
+    .car-container {
+        zoom: 80%;
+    }
+}
+@media screen and (max-width: 655px) {
+    .car-container {
+        zoom: 60%;
+    }
+    .car-services-tab-custom {
+        height: 400px;
+    }
+
+    .mechanic-section {
+        height: 500px;
+    }
+    .mechanic-section-main {
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 939px) {
+    .cargo-content-container {
+        flex-direction: column;
+    }
+
+    .section-cargo {
+        height: auto;
+    }
+
+    .cargo-container {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1039px) {
+    .girl-img {
+        width: 300px;
+    }
+}
+@media screen and (max-width: 1011) {
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 815px) {
+    .questions-pic-container {
+        flex-direction: column;
+    }
+
+    .questions-section {
+        height: auto;
+        padding: 50px 0;
+    }
+}
+
+@media screen and (max-width: 609px) {
+    .map iframe {
+        width: 300px;
+    }
+}
+@media screen and (max-width: 555px) {
+    .cargoPic {
+        zoom: 80%;
+    }
+}
+@media screen and (max-width: 835px) {
+    .cards-row, .service-cards {
+        zoom: 80%;
+    }
+
+    .cards-main-container-service {
+        height: auto;
+    }
+
+    .section2 {
+        padding: 40px 0;
+        height: auto;
+    }
+}
+
+
+@media screen and (max-width: 631px) {
+    .cards-row, .service-cards {
+        zoom: 60%;
+    }
+}
+@media screen and (max-width: 493px) {
+   .choose-parts-container, .car-container {
+    zoom: 40%;
+   }
+}
+@media screen and (max-width: 405px) {
+   .cargo-information  {
+    zoom: 70%;
+   }
+
+   .cargoPic  {
+    width: 90%;
+   }
+}
+
+@media screen and (max-width: 395px) {
+    .main-text-container {
+        zoom: 70%;
+    }
+}

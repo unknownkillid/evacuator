@@ -1,21 +1,29 @@
 const smallContainers = document.querySelectorAll('.small');
 const carContainer = document.querySelector('.car-container')
 const chooseContainer = document.querySelector('.choose-parts-container')
+const cargoPic = document.querySelector('.cargoPic')
+const questPicture = document.querySelector('.quest-picture')
 
 const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('comeinAnim');
       entry.target.classList.add('carContainerIn')
+      entry.target.classList.add('cargoIn')
+      entry.target.classList.add('questComeIn')
     } else {
       entry.target.classList.remove('comeinAnim'); 
       entry.target.classList.remove('carContainerIn')
+      entry.target.classList.remove('cargoIn')
+      entry.target.classList.remove('questComeIn')
     }
   });
 }, { threshold: 0.1 });
 
 smallContainers.forEach(container => observer.observe(container));
 observer.observe(carContainer)
+observer.observe(cargoPic)
+observer.observe(questPicture)
 
 
 const paralaxSection = document.getElementById('section1')
