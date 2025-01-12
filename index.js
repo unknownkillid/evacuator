@@ -12,7 +12,7 @@ const observer = new IntersectionObserver((entries, observer) => {
       entry.target.classList.add('cargoIn')
       entry.target.classList.add('questComeIn')
     } else {
-      entry.target.classList.remove('comeinAnim'); 
+      entry.target.classList.remove('comeinAnim');
       entry.target.classList.remove('carContainerIn')
       entry.target.classList.remove('cargoIn')
       entry.target.classList.remove('questComeIn')
@@ -98,3 +98,35 @@ questions.forEach(question => {
     answer.classList.toggle('show');
   });
 });
+
+const burgerButton = document.getElementById('burgerButton')
+const burgerMenuContent = document.getElementById('burgerMenuContent')
+
+burgerButton.addEventListener('click', () => {
+  burgerMenuContent.classList.add('classAdd')
+  document.body.style.overflow = 'hidden'
+  setTimeout(() => {
+    burgerMenuContent.classList.add('burgerComeIn')
+  }, 100);
+})
+
+document.getElementById('xBtn').addEventListener('click', () => {
+  burgerMenuContent.classList.remove('burgerComeIn')
+  document.body.style.overflow = 'scroll'
+
+  setTimeout(() => {
+    burgerMenuContent.classList.remove('classAdd')
+  }, 600);
+})
+
+document.querySelectorAll('.burgerLink').forEach(burgerLinks => {
+  
+
+ burgerLinks.addEventListener('click', () => {
+  burgerMenuContent.classList.remove('burgerComeIn')
+  document.body.style.overflow = 'scroll'
+  setTimeout(() => {
+    burgerMenuContent.classList.remove('classAdd')
+  }, 600);
+ })
+})
