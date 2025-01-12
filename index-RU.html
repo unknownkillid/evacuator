@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Документ</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -18,25 +18,26 @@
         </div>
 
         <div class="header-links">
-            <a href="#">მთავარი</a>
+            <a href="#">Главная</a>
             <div class="dropdown">
-                <a class="serviceLink">სერვისი</a>
+                <a class="serviceLink">Услуги</a>
                 <div class="dropdown-menu">
-                    <a href="#section2">ევაკუატორი</a>
-                    <a href="#mechanicSection">სახელოსნო</a>
-                    <a href="#sectionCargo">გადაზიდვა</a>
+                    <a href="#section2">Эвакуатор</a>
+                    <a href="#mechanicSection">Механик</a>
+                    <a href="#sectionCargo">Грузоперевозки</a>
                 </div>
             </div>
-            <a href="#questions">დახმარება</a>
-            <a href="#">კონტაქტი</a>
+            <a href="#questions">Помощь</a>
+            <a href="#">Контакты</a>
         </div>
 
         <div class="language-container">
             <h3 class="number-header"><i class="fa-solid fa-phone" style="font-size: medium;"></i>(+995) 701-030</h3>
             <select name="language" class="select" id="language" onchange="changeLanguage()">
-                <option selected>GE</option>
+                <option selected disabled hidden>RU</option>
+                <option value="GE">GE</option>
                 <option value="EN">EN</option>
-                <option value="RU">RU</option>
+                <option value="RU" selected>RU</option>
             </select>
         </div>
 
@@ -47,17 +48,18 @@
 
     <div class="burger-menu-content" id="burgerMenuContent">
         <header class="xBtn" id="xBtn" style="color: white;">X</header>
-        <a class="burgerLink" href="#">მთავარი</a>
-        <a class="burgerLink" href="#section2">ევაკუატორი</a>
-        <a class="burgerLink" href="#mechanicSection">სახელოსნო</a>
-        <a class="burgerLink" href="#sectionCargo">გადაზიდვა</a>
-        <a class="burgerLink" href="#questions">დახმარება</a>
-        <a class="burgerLink" href="#">კონტაქტი</a>
+        <a class="burgerLink" href="#">Главная</a>
+        <a class="burgerLink" href="#section2">Эвакуатор</a>
+        <a class="burgerLink" href="#mechanicSection">Механик</a>
+        <a class="burgerLink" href="#sectionCargo">Грузоперевозки</a>
+        <a class="burgerLink" href="#questions">Помощь</a>
+        <a class="burgerLink" href="#">Контакты</a>
         <a class="burgerLink" href="tel:+995701030">(+995) 701-030 <i class="fa-solid fa-phone"></i></a>
         <select name="language" class="select" id="languageBurger" onchange="changeLanguageBurger()">
-            <option selected >GE</option>
+            <option selected disabled hidden>RU</option>
+            <option value="GE">GE</option>
             <option value="EN">EN</option>
-            <option value="RU">RU</option>
+            <option value="RU" selected>RU</option>
         </select>
     </div>
 
@@ -66,12 +68,12 @@
 
         <div class="main-text-container">
             <h1><span class="hours">24/7</span></h1>
-            <h1 class="main-text">თქვენი უსაფრთხოება, ჩვენი პრივილეგიაა. <br> ყოველთვის მზად ვართ <span
-                    class="help">დაგეხმაროთ.</span></h1>
+            <h1 class="main-text">Ваша безопасность — наша привилегия. <br> Мы всегда готовы <span
+                    class="help">помочь</span> вам.</h1>
 
             <div class="main-buttons">
-                <a href="tel:+995701030">დაგვიკავშირდით <i class="fa-solid fa-phone"></i></a>
-                <a href="#section2">სერვისი <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="tel:+995701030">Позвоните нам <i class="fa-solid fa-phone"></i></a>
+                <a href="#section2">Услуги <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
         <div class="svgContainer">
@@ -81,33 +83,31 @@
 
     <section class="section2" id="section2">
         <div class="headingContainer">
-            <h1>სერვისი</h1>
-            <h4>რას ვთავაზობთ ჩვენს მომხმარებელს?</h4>
+            <h1>Услуги</h1>
+            <h4>Что мы предлагаем нашим клиентам?</h4>
         </div>
         <div class="cards-main-container-service">
             <div class="cards-row">
                 <div class="card-long bg1">
                     <div class="card-blur-long">
-                        <h1 class="cardNames">ევაკუატორი</h1>
+                        <h1 class="cardNames">Эвакуатор</h1>
                     </div>
                 </div>
                 <div class="card-small bg2 first-small small">
                     <div class="card-blur">
-                        <h1 class="cardNames">საბურავის ადგილზე <br> გამოცვლა</h1>
-
+                        <h1 class="cardNames">Замена шин <br> на месте</h1>
                     </div>
                 </div>
             </div>
             <div class="cards-row">
                 <div class="card-small bg3 second-small small">
                     <div class="card-blur">
-                        <h1 class="cardNames">მანქანის ადგილზე <br> დაქოქვა</h1>
-
+                        <h1 class="cardNames">Запуск автомобиля <br> на месте</h1>
                     </div>
                 </div>
                 <div class="card-long bg4">
                     <div class="card-blur-long">
-                        <h1 class="cardNames">საწვავის ადგილზე მიწოდება და მექანიკოსის დახმარება</h1>
+                        <h1 class="cardNames">Доставка топлива на место и помощь механика</h1>
                     </div>
                 </div>
             </div>
@@ -117,15 +117,15 @@
                     <img src="assets/tyre_whiite_2-1.png" alt="" class="tire">
                     <div class="content">
                         <i class="fa-solid fa-clock"></i>
-                        <h1>ჩვენ მოგემსახურებით ყველაზე სწრაფად</h1>
+                        <h1>Мы обслужим вас быстрее</h1>
                     </div>
                 </div>
                 <div class="cardsCol card2">
                     <img src="assets/tyre_red_2-1.png" alt="" class="tire">
                     <div class="content">
                         <i class="fa-solid fa-phone"></i>
-                        <h1>ხაზზე ვართ 24 საათის განმავლობაში</h1>
-                        <a href="tel:+995701030" class="callus">დაგვიკავშირდით ახლავე <i class="fa-solid fa-arrow-right"
+                        <h1>Мы доступны 24/7</h1>
+                        <a href="tel:+995701030" class="callus">Позвоните нам сейчас <i class="fa-solid fa-arrow-right"
                                 style="font-size: medium;"></i></a>
                     </div>
                 </div>
@@ -133,45 +133,42 @@
                     <img src="assets/tyre_whiite_1-1.png" alt="" class="tire">
                     <div class="content">
                         <i class="fa-solid fa-dollar-sign"></i>
-                        <h1>მომხმარებელზე მორგებული ფასები</h1>
+                        <h1>Индивидуальные цены для клиентов</h1>
                     </div>
                 </div>
             </div>
         </div>
-
-
     </section>
-
 
     <section class="mechanic-section-main" id="mechanicSection">
         <div class="mechanic-section">
-            <h1>ჩვენი ავტო სახელოსნო</h1>
+            <h1>Наш автосервис.</h1>
 
             <div class="car-services-tab-custom">
                 <div class="choose-parts-container mechanicContainer">
                     <div class="choose" onclick="fullInfoMechanic(true);">
                         <img src="assets/diagnos.png" style="width: 90px;" alt="">
-                        დიაგნოსტიკა
+                        Диагностика
                     </div>
                     <div class="choose" onclick="fullInfoMechanic(false, true);">
                         <img src="assets/engine.png" style="width: 90px;" alt="">
-                        ძრავი
+                        Двигатель
                     </div>
                     <div class="choose" onclick="fullInfoMechanic(false, false, true)">
                         <img src="assets/tire.png" style="width: 90px;" alt="">
-                        საბურავები
+                        Шины
                     </div>
                     <div class="choose" onclick="fullInfoMechanic(false, false, false, true)">
                         <img src="assets/batt.png" style="width: 90px;" alt="">
-                        აკუმლატორი
+                        Аккумулятор
                     </div>
                     <div class="choose" onclick="fullInfoMechanic(false, false, false, false, true)">
                         <img src="assets/shift.png" style="width: 90px;" alt="">
-                        გადაცემათა კოლოფი
+                        Коробка передач
                     </div>
                     <div class="choose" onclick="fullInfoMechanic(false, false, false, false, false, true)">
                         <img src="assets/oil.png" style="width: 90px;" alt="">
-                        ზეთი
+                        Масла
                     </div>
                 </div>
 
@@ -186,24 +183,20 @@
                     <div class="dot oil" id="oil" onclick="fullInfoMechanic(false, false, false, false, false, true)">
                     </div>
                     <div class="car-text-container">
-                        <p id="fullInfo">კომპიუტერული დიაგნოსტიკა თქვენი მანქანისთვის</p>
+                        <p id="fullInfo">Компьютерная диагностика вашего автомобиля</p>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </section>
 
-
     <section class="section-cargo" id="sectionCargo">
         <div class="cargo-container" id="cargoContainer">
-            <h1>გადაზიდვის სერვისი</h1>
+            <h1>Грузовые услуги</h1>
             <div class="cargo-content-container">
                 <div class="cargo-information">
-                    <h1>ჩვენ გადავიტანთ თქვენს ტვირთს, <br> ყველაზე სწრაფად და <span class="help">უსაფრთხოდ.</span>
-                    </h1>
-                    <p>ტვირთის მაქსიმალური წონა შეადგენს 4 ტონას. <br> დეტალებისთვის დარეკეთ</p>
+                    <h1>Мы перевезем ваш груз, <br> как можно быстрее и <span class="help">безопаснее</span></h1>
+                    <p>Максимальный вес груза — 4 тонны. <br> Для подробной информации звоните.</p>
                 </div>
                 <img class="cargoPic" src="assets/cargo.png" alt="">
             </div>
@@ -211,7 +204,7 @@
     </section>
 
     <section class="questions-section" id="questions">
-        <h1>ხშირად დასმული კითხვები</h1>
+        <h1>Часто задаваемые вопросы</h1>
 
         <div class="questions-pic-container">
             <div class="quest-picture">
@@ -220,33 +213,30 @@
 
             <div class="faq-container">
                 <div class="faq-item">
-                    <div class="faq-question">რომელი რეგიონებში გაქვთ მომსახურება?</div>
-                    <div class="faq-answer">ნებისმიერ რეგიონში საქართველოს მასშტაბით.</div>
+                    <div class="faq-question">В каких регионах вы предоставляете услуги?</div>
+                    <div class="faq-answer">Мы предоставляем услуги по всей территории Грузии.</div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question">შესაძლებელია თუ არა წინასწარ ჩაწერა?</div>
-                    <div class="faq-answer">რათქმაუნდა წინასწარ ჩაწერა შესაძლებელია თქვენზე მორგებულ დროსა და განრიგში.
-                    </div>
+                    <div class="faq-question">Можно ли записаться заранее?</div>
+                    <div class="faq-answer">Конечно, запись возможна в удобное для вас время и график.</div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question">როგორ ხდება ფასწარმოქმნა?</div>
-                    <div class="faq-answer">ფასწარმოქმნა ხდება, წინასწარი შეთანხმების შედეგად. მანძილისა და დროის
-                        გათვალისწინებით.</div>
+                    <div class="faq-question">Как происходит ценообразование?</div>
+                    <div class="faq-answer">Ценообразование происходит по предварительной договоренности. Учитываются
+                        расстояние и время.</div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question">შესაძლებელია თუ არა ნაღდი ანგარიშსწორებით ან ბარათით გადახდა?
-                    </div>
-                    <div class="faq-answer">შეგიძლიათ გადაიხადოთ როგორც ბარათით, ასევე ნაღდი ანგარიშსწორებით.</div>
+                    <div class="faq-question">Можно ли оплатить наличными или картой?</div>
+                    <div class="faq-answer">Вы можете оплатить как картой, так и наличными.</div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question">რომელი ტიპის ავტომობილების ევაკუაციას აკეთებთ?</div>
-                    <div class="faq-answer">ჩვენ გთავაზობთ როგორც მსუბუქი ასევე მიკროავტობუსის ტიპის ტრანსპორტის
-                        ევაკუაციას</div>
+                    <div class="faq-question">Какие типы автомобилей вы эвакуируете?</div>
+                    <div class="faq-answer">Мы предлагаем эвакуацию как легковых, так и микроавтобусов.</div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question">როგორ უზრუნველყოფთ ავტომობილის უსაფრთხოებას ევაკუაციის დროს?</div>
-                    <div class="faq-answer">ავტომობილის უსაფრთხოებას ვუზრუნველყოფთ, გამოცდილი მძღოლებით. ასევე
-                        დაზიანების შემთხვევაში, რათქმაუნდა ჩვენ ავანაძღაურებთ.</div>
+                    <div class="faq-question">Как вы обеспечиваете безопасность автомобиля во время эвакуации?</div>
+                    <div class="faq-answer">Мы обеспечиваем безопасность автомобиля опытными водителями. В случае
+                        повреждений, мы компенсируем ущерб.</div>
                 </div>
 
             </div>
@@ -256,10 +246,12 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-links">
-                <a href="#">მთავარი</a>
-                <a href="#section2">სერვისი</a>
-                <a href="#questions">დახმარება</a>
-                <a href="#">კონტაქტი</a>
+                <a href="#">Главная</a>
+                <a href="#section2">Эвакуатор</a>
+                <a href="#mechanicSection">Механик</a>
+                <a href="#sectionCargo">Грузоперевозки</a>
+                <a href="#questions">Помощь</a>
+                <a href="#">Контакты</a>
             </div>
 
             <div class="footer-contact">

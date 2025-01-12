@@ -1,132 +1,32 @@
-const smallContainers = document.querySelectorAll('.small');
-const carContainer = document.querySelector('.car-container')
-const chooseContainer = document.querySelector('.choose-parts-container')
-const cargoPic = document.querySelector('.cargoPic')
-const questPicture = document.querySelector('.quest-picture')
-
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('comeinAnim');
-      entry.target.classList.add('carContainerIn')
-      entry.target.classList.add('cargoIn')
-      entry.target.classList.add('questComeIn')
-    } else {
-      entry.target.classList.remove('comeinAnim');
-      entry.target.classList.remove('carContainerIn')
-      entry.target.classList.remove('cargoIn')
-      entry.target.classList.remove('questComeIn')
-    }
-  });
-}, { threshold: 0.1 });
-
-smallContainers.forEach(container => observer.observe(container));
-observer.observe(carContainer)
-observer.observe(cargoPic)
-observer.observe(questPicture)
+const _0x4aae07 = _0x20d0; (function (_0x5bc99d, _0x8fd17b) { const _0x35de06 = _0x20d0, _0x4710d3 = _0x5bc99d(); while (!![]) { try { const _0x5c3ecd = parseInt(_0x35de06(0xc8)) / 0x1 + -parseInt(_0x35de06(0xd3)) / 0x2 + -parseInt(_0x35de06(0xe3)) / 0x3 * (-parseInt(_0x35de06(0xba)) / 0x4) + parseInt(_0x35de06(0xc4)) / 0x5 * (parseInt(_0x35de06(0xce)) / 0x6) + -parseInt(_0x35de06(0xa9)) / 0x7 * (parseInt(_0x35de06(0xaa)) / 0x8) + -parseInt(_0x35de06(0xa6)) / 0x9 * (-parseInt(_0x35de06(0xe1)) / 0xa) + -parseInt(_0x35de06(0xb3)) / 0xb; if (_0x5c3ecd === _0x8fd17b) break; else _0x4710d3['push'](_0x4710d3['shift']()); } catch (_0x31421c) { _0x4710d3['push'](_0x4710d3['shift']()); } } }(_0x763b, 0x37ac9)); const smallContainers = document[_0x4aae07(0xc0)]('.small'), carContainer = document[_0x4aae07(0xda)](_0x4aae07(0xad)), chooseContainer = document[_0x4aae07(0xda)](_0x4aae07(0xe0)), cargoPic = document[_0x4aae07(0xda)]('.cargoPic'), questPicture = document[_0x4aae07(0xda)](_0x4aae07(0xdf)), observer = new IntersectionObserver((_0x2cceba, _0x4c33e7) => { _0x2cceba['forEach'](_0x236db7 => { const _0x1dc9f3 = _0x20d0; _0x236db7[_0x1dc9f3(0xde)] ? (_0x236db7[_0x1dc9f3(0xc1)][_0x1dc9f3(0xcd)]['add'](_0x1dc9f3(0xab)), _0x236db7[_0x1dc9f3(0xc1)][_0x1dc9f3(0xcd)]['add']('carContainerIn'), _0x236db7['target'][_0x1dc9f3(0xcd)][_0x1dc9f3(0xd8)](_0x1dc9f3(0xd2)), _0x236db7[_0x1dc9f3(0xc1)][_0x1dc9f3(0xcd)][_0x1dc9f3(0xd8)](_0x1dc9f3(0xb4))) : (_0x236db7[_0x1dc9f3(0xc1)][_0x1dc9f3(0xcd)][_0x1dc9f3(0xb1)](_0x1dc9f3(0xab)), _0x236db7['target'][_0x1dc9f3(0xcd)][_0x1dc9f3(0xb1)](_0x1dc9f3(0xc7)), _0x236db7[_0x1dc9f3(0xc1)][_0x1dc9f3(0xcd)][_0x1dc9f3(0xb1)](_0x1dc9f3(0xd2)), _0x236db7[_0x1dc9f3(0xc1)][_0x1dc9f3(0xcd)][_0x1dc9f3(0xb1)]('questComeIn')); }); }, { 'threshold': 0.1 }); smallContainers['forEach'](_0x1dac74 => observer[_0x4aae07(0xd9)](_0x1dac74)), observer[_0x4aae07(0xd9)](carContainer), observer[_0x4aae07(0xd9)](cargoPic), observer[_0x4aae07(0xd9)](questPicture); const paralaxSection = document['getElementById'](_0x4aae07(0xbb)); window[_0x4aae07(0xc2)](_0x4aae07(0xb6), () => { const _0x18a3df = _0x4aae07; let _0x4c54c2 = window[_0x18a3df(0xc5)]; paralaxSection['style']['backgroundPositionY'] = _0x4c54c2 / 0x2 + 'px'; }); function fullInfoMechanic(_0x369064, _0x5163bf, _0x483e3b, _0x1559d1, _0x46676c, _0x279a44) { const _0x3a7e31 = _0x4aae07, _0x17b06d = document[_0x3a7e31(0xcc)]('fullInfo'); let _0x381b34 = ''; const _0x13f6e9 = { 'diag': _0x3a7e31(0xc9), 'eng': _0x3a7e31(0xd0), 'tir': 'საბურავების\x20შეკეთება,\x20გამოცვლა', 'batt': _0x3a7e31(0xaf), 'shif': 'გადაცემათა\x20კოლოფის\x20შეკეთება', 'oil': _0x3a7e31(0xb9) }; if (_0x369064) _0x381b34 += _0x13f6e9[_0x3a7e31(0xb0)] + '\x0a'; if (_0x5163bf) _0x381b34 += _0x13f6e9[_0x3a7e31(0xb8)] + '\x0a'; if (_0x483e3b) _0x381b34 += _0x13f6e9['tir'] + '\x0a'; if (_0x1559d1) _0x381b34 += _0x13f6e9[_0x3a7e31(0xdc)] + '\x0a'; if (_0x46676c) _0x381b34 += _0x13f6e9['shif'] + '\x0a'; if (_0x279a44) _0x381b34 += _0x13f6e9[_0x3a7e31(0xbe)] + '\x0a'; _0x17b06d[_0x3a7e31(0xcf)] = _0x381b34; const _0xba813f = document[_0x3a7e31(0xc0)](_0x3a7e31(0xa7)); _0xba813f[_0x3a7e31(0xdd)](_0x5a5ac6 => _0x5a5ac6[_0x3a7e31(0xcd)][_0x3a7e31(0xb1)](_0x3a7e31(0xc3))); if (_0x369064) document[_0x3a7e31(0xcc)](_0x3a7e31(0xca))['classList'][_0x3a7e31(0xd8)](_0x3a7e31(0xc3)); if (_0x5163bf) document[_0x3a7e31(0xcc)]('engine')['classList'][_0x3a7e31(0xd8)](_0x3a7e31(0xc3)); if (_0x483e3b) document[_0x3a7e31(0xcc)](_0x3a7e31(0xb7))[_0x3a7e31(0xcd)][_0x3a7e31(0xd8)]('orange'); if (_0x1559d1) document[_0x3a7e31(0xcc)](_0x3a7e31(0xbd))[_0x3a7e31(0xcd)]['add']('orange'); if (_0x46676c) document[_0x3a7e31(0xcc)](_0x3a7e31(0xdb))[_0x3a7e31(0xcd)][_0x3a7e31(0xd8)]('orange'); if (_0x279a44) document['getElementById'](_0x3a7e31(0xbe))[_0x3a7e31(0xcd)][_0x3a7e31(0xd8)](_0x3a7e31(0xc3)); } function _0x763b() { const _0x1e8419 = ['shift', 'batt', 'forEach', 'isIntersecting', '.quest-picture', '.choose-parts-container', '10xwAlpx', 'burgerButton', '147OtSBAR', 'classAdd', '.faq-question', '3415473VglPjg', '.dot', 'nextElementSibling', '479626DNdIHq', '24GGEoHR', 'comeinAnim', 'show', '.car-container', 'style', 'აკუმლატორის\x20შეკეთება,\x20დატენვა', 'diag', 'remove', 'body', '2861386IUJaNt', 'questComeIn', 'burgerComeIn', 'scroll', 'tires', 'eng', 'ზეთის\x20შეცვლა,\x20შემოწმება', '23748nIckJp', 'section1', '.dropdown', 'battery', 'oil', 'none', 'querySelectorAll', 'target', 'addEventListener', 'orange', '324245VGdRez', 'pageYOffset', '.faq-answer', 'carContainerIn', '154772EyHdxW', 'კომპიუტერული\x20დიაგნოსტიკა\x20თქვენი\x20მანქანისთვის', 'diagnostic', '.dropdown-menu', 'getElementById', 'classList', '30HVyTAT', 'textContent', 'ძრავის\x20შეკეთება,\x20დიაგნოსტიკა', 'overflow', 'cargoIn', '911412NNbCBu', 'block', 'display', 'click', 'hidden', 'add', 'observe', 'querySelector']; _0x763b = function () { return _0x1e8419; }; return _0x763b(); } document['getElementById']('diagnostic')[_0x4aae07(0xcd)]['add'](_0x4aae07(0xc3)); const dropdown = document[_0x4aae07(0xda)](_0x4aae07(0xbc)), dropdownMenu = document[_0x4aae07(0xda)](_0x4aae07(0xcb)); dropdown[_0x4aae07(0xc2)](_0x4aae07(0xd6), () => { const _0xc717a = _0x4aae07; dropdownMenu[_0xc717a(0xae)][_0xc717a(0xd5)] = dropdownMenu[_0xc717a(0xae)][_0xc717a(0xd5)] === _0xc717a(0xd4) ? _0xc717a(0xbf) : _0xc717a(0xd4); }), document[_0x4aae07(0xc2)](_0x4aae07(0xd6), _0x16e9c2 => { const _0x457e2a = _0x4aae07; !dropdown['contains'](_0x16e9c2[_0x457e2a(0xc1)]) && (dropdownMenu[_0x457e2a(0xae)][_0x457e2a(0xd5)] = _0x457e2a(0xbf)); }); const questions = document[_0x4aae07(0xc0)](_0x4aae07(0xe5)); function _0x20d0(_0x56bdbc, _0x41d88b) { const _0x763ba4 = _0x763b(); return _0x20d0 = function (_0x20d07b, _0x2bfb39) { _0x20d07b = _0x20d07b - 0xa6; let _0x2b630b = _0x763ba4[_0x20d07b]; return _0x2b630b; }, _0x20d0(_0x56bdbc, _0x41d88b); } questions['forEach'](_0x17da23 => { const _0x371dcc = _0x4aae07; _0x17da23[_0x371dcc(0xc2)]('click', () => { const _0xcb1f1f = _0x371dcc; document[_0xcb1f1f(0xc0)](_0xcb1f1f(0xc6))['forEach'](_0x516cd3 => { const _0x3e6fd6 = _0xcb1f1f; _0x516cd3 !== _0x17da23[_0x3e6fd6(0xa8)] && _0x516cd3[_0x3e6fd6(0xcd)]['remove']('show'); }); const _0x22142b = _0x17da23[_0xcb1f1f(0xa8)]; _0x22142b['classList']['toggle'](_0xcb1f1f(0xac)); }); }); const burgerButton = document[_0x4aae07(0xcc)](_0x4aae07(0xe2)), burgerMenuContent = document[_0x4aae07(0xcc)]('burgerMenuContent'); burgerButton[_0x4aae07(0xc2)](_0x4aae07(0xd6), () => { const _0xf69519 = _0x4aae07; burgerMenuContent[_0xf69519(0xcd)][_0xf69519(0xd8)](_0xf69519(0xe4)), document[_0xf69519(0xb2)][_0xf69519(0xae)]['overflow'] = _0xf69519(0xd7), setTimeout(() => { const _0x56cf13 = _0xf69519; burgerMenuContent['classList'][_0x56cf13(0xd8)]('burgerComeIn'); }, 0x64); }), document[_0x4aae07(0xcc)]('xBtn')[_0x4aae07(0xc2)](_0x4aae07(0xd6), () => { const _0x20b69a = _0x4aae07; burgerMenuContent['classList'][_0x20b69a(0xb1)](_0x20b69a(0xb5)), document['body'][_0x20b69a(0xae)][_0x20b69a(0xd1)] = _0x20b69a(0xb6), setTimeout(() => { const _0x5860ab = _0x20b69a; burgerMenuContent['classList']['remove'](_0x5860ab(0xe4)); }, 0x258); }), document[_0x4aae07(0xc0)]('.burgerLink')[_0x4aae07(0xdd)](_0x5c676a => { const _0x2718fe = _0x4aae07; _0x5c676a['addEventListener'](_0x2718fe(0xd6), () => { const _0x4946e7 = _0x2718fe; burgerMenuContent['classList'][_0x4946e7(0xb1)](_0x4946e7(0xb5)), document[_0x4946e7(0xb2)][_0x4946e7(0xae)]['overflow'] = _0x4946e7(0xb6), setTimeout(() => { const _0x4565f9 = _0x4946e7; burgerMenuContent[_0x4565f9(0xcd)][_0x4565f9(0xb1)](_0x4565f9(0xe4)); }, 0x258); }); });
 
 
-const paralaxSection = document.getElementById('section1')
+function changeLanguage() {
+  const language = document.getElementById("language").value;
 
-window.addEventListener('scroll', () => {
-  let offset = window.pageYOffset;
-  paralaxSection.style.backgroundPositionY = offset / 2 + "px"
-})
-
-function fullInfoMechanic(diag, eng, tir, batt, shif, oil) {
-  const fullInfo = document.getElementById("fullInfo");
-  let info = '';
-
-  const options = {
-    diag: 'კომპიუტერული დიაგნოსტიკა თქვენი მანქანისთვის',
-    eng: 'ძრავის შეკეთება, დიაგნოსტიკა',
-    tir: 'საბურავების შეკეთება, გამოცვლა',
-    batt: 'აკუმლატორის შეკეთება, დატენვა',
-    shif: 'გადაცემათა კოლოფის შეკეთება',
-    oil: 'ზეთის შეცვლა, შემოწმება'
+  const urls = {
+    "GE": "index.html",
+    "EN": "index-ENG.html",
+    "RU": "index-RU.html"
   };
 
-  if (diag) info += options.diag + '\n';
-  if (eng) info += options.eng + '\n';
-  if (tir) info += options.tir + '\n';
-  if (batt) info += options.batt + '\n';
-  if (shif) info += options.shif + '\n';
-  if (oil) info += options.oil + '\n';
+  if (urls[language]) {
+    window.location.href = urls[language];
+    console.log(language);
 
-  fullInfo.textContent = info;
-
-  const dots = document.querySelectorAll('.dot');
-  dots.forEach(dot => dot.classList.remove('orange'));
-
-  if (diag) document.getElementById('diagnostic').classList.add('orange');
-  if (eng) document.getElementById('engine').classList.add('orange');
-  if (tir) document.getElementById('tires').classList.add('orange');
-  if (batt) document.getElementById('battery').classList.add('orange');
-  if (shif) document.getElementById('shift').classList.add('orange');
-  if (oil) document.getElementById('oil').classList.add('orange');
+  }
 }
 
-document.getElementById('diagnostic').classList.add('orange');
+function changeLanguageBurger() {
+  const language = document.getElementById("languageBurger").value;
 
+  const urls = {
+    "GE": "index.html",
+    "EN": "index-ENG.html",
+    "RU": "index-RU.html"
+  };
 
-const dropdown = document.querySelector('.dropdown');
-const dropdownMenu = document.querySelector('.dropdown-menu');
-
-dropdown.addEventListener('click', () => {
-  dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
-});
-
-document.addEventListener('click', (event) => {
-  if (!dropdown.contains(event.target)) {
-    dropdownMenu.style.display = 'none';
+  if (urls[language]) {
+    window.location.href = urls[language];
   }
-});
-
-const questions = document.querySelectorAll('.faq-question');
-
-questions.forEach(question => {
-  question.addEventListener('click', () => {
-    // Close all other answers
-    document.querySelectorAll('.faq-answer').forEach(answer => {
-      if (answer !== question.nextElementSibling) {
-        answer.classList.remove('show');
-      }
-    });
-
-    // Toggle the clicked question's answer
-    const answer = question.nextElementSibling;
-    answer.classList.toggle('show');
-  });
-});
-
-const burgerButton = document.getElementById('burgerButton')
-const burgerMenuContent = document.getElementById('burgerMenuContent')
-
-burgerButton.addEventListener('click', () => {
-  burgerMenuContent.classList.add('classAdd')
-  document.body.style.overflow = 'hidden'
-  setTimeout(() => {
-    burgerMenuContent.classList.add('burgerComeIn')
-  }, 100);
-})
-
-document.getElementById('xBtn').addEventListener('click', () => {
-  burgerMenuContent.classList.remove('burgerComeIn')
-  document.body.style.overflow = 'scroll'
-
-  setTimeout(() => {
-    burgerMenuContent.classList.remove('classAdd')
-  }, 600);
-})
-
-document.querySelectorAll('.burgerLink').forEach(burgerLinks => {
-  
-
- burgerLinks.addEventListener('click', () => {
-  burgerMenuContent.classList.remove('burgerComeIn')
-  document.body.style.overflow = 'scroll'
-  setTimeout(() => {
-    burgerMenuContent.classList.remove('classAdd')
-  }, 600);
- })
-})
+}
