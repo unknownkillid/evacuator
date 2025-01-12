@@ -822,8 +822,27 @@
     }
 }
 @media screen and (max-width: 493px) {
-   .choose-parts-container, .car-container {
-    zoom: 40%;
+   .choose-parts-container{
+    display: none;
+   }
+
+   .car-container {
+    zoom: 50%;
+   }
+
+   .car-services-tab-custom {
+    height: auto;
+    padding: 20px 0;
+   }
+
+   .mechanic-section {
+    height: auto;
+    padding: 20px 0;
+   }
+
+   .mechanic-section-main {
+    height: auto;
+    padding: 20px 0;
    }
 }
 @media screen and (max-width: 405px) {
